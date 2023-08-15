@@ -1,0 +1,131 @@
+.title {
+  margin: 50px 0 50px;
+}
+
+.header {
+  display: flexbox;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.product {
+  display: flexbox;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex: 1 0 calc(25% - 20px);
+  margin: 10px;
+  padding: 0 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  width: 18rem;
+}
+
+.product-img {
+  width: 300px;
+  height: 200px;
+}
+
+.product-price,
+.product-rating {
+  background-color: #e6e9e6;
+}
+
+.product-price {
+  margin-bottom: 0;
+}
+
+.add-to-cart-btn,
+.order-btn {
+  width: 50%;
+  background-color: #0000ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-to-cart-btn:hover,
+.order-btn:hover {
+  background-color: #00008b;
+  transform: scale(1.05);
+}
+
+.add-to-cart-btn:active,
+.order-btn:active {
+  background-color: #00bfff;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 78px;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  position: absolute;
+  right: 320px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #008353;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 769px) {
+  .product {
+    flex: 1 0 calc(100% - 20px);
+  }
+}
